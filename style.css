@@ -108,3 +108,34 @@ li a {
     font-size: var(--font-size-heading-1);
     font-family: var(--font-family-heading);
 }
+.banner-description {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.contacts-list {
+    display: flex;
+}
+.contacts-link {
+    height: var(--button-height);
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--button-border-radius);
+    text-transform: uppercase;
+}
+.email-link {
+    background-color:var(--color-violet);
+    padding-inline: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+}
+.email-link svg {
+    font-size: 16px;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    color: var(--color-white);
+}
