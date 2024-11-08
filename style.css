@@ -1,18 +1,19 @@
 
 @font-face {
-    font-family: 'BebasNeue';
-    src: url('./Fonts/AnyConv.com__BebasNeue-Regular.woff2');
+    font-family: 'Bebas';
+    src: url('/Fonts/BebasNeue-Regular.woff2') format('woff2');
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
 }
 @font-face {
     font-family: 'Manrope';
-    src: url('./Fonts/AnyConv.com__Manrope-VariableFont_wght.woff2');
+    src: url('/Fonts/Manrope-VariableFont_wght.woff2') format('woff2');
     font-style: normal;
+    font-weight: normal;
 }
 :root {
-    --font-family-heading: 'BebasNeue', arial;
-    --font-family-text: 'Manrope', sans-serif;
+    --font-family-heading: 'Bebas', arial;
+    --font-family-text: 'Manrope', tahoma;
     --color-black: #000;
     --color-white: #fff;
     --color-violet: #676BFF;
@@ -26,7 +27,84 @@
     --image-border-radius: 16px;
     --secondary-border-radius: 12px; 
 }
-* {
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body {
     box-sizing: border-box;
     font-family: var(--font-family-text);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: var(--font-size-secondary-1);
+    width: 100vw;
+}
+li a {
+    color: var(--color-white);
+}
+.header {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 10px;
+}
+.logo {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: var(--font-size-subheading);
+    font-family: var(--font-family-heading);
+    text-transform: uppercase;
+}
+.logo-caption{
+    margin-left: 10px;
+}
+.navigation {
+    display: flex;
+    justify-content: end;
+}
+.nav-list{
+    display: flex;
+}
+.list-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-link {
+    height: 48px;
+    padding-inline:12px ;
+    margin-inline: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-secondary-2);
+    font-weight: 500;
+
+}
+.banner {
+    margin-top: 30px;
+    width: 90%;
+    height: 663px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-info {
+    width: 40%;
+}
+.banner-heading {
+    font-size: var(--font-size-heading-1);
+    font-family: var(--font-family-heading);
 }
