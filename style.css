@@ -17,12 +17,17 @@
     --color-black: #000;
     --color-white: #fff;
     --color-violet: #676BFF;
+    --color-semi-transparent: rgba(255, 255, 255, 0.171);
     --font-size-subheading: 32px;
     --font-size-heading-1: 101px;
     --font-size-heading-2: 76px;
     --font-size-secondary-1: 18px;
     --font-size-secondary-2: 16px;
+    --font-size-subheading-mobile: 28px;
+    --font-size-heading-1-mobile: 57px;
+    --font-size-heading-2-mobile: 43px;
     --button-height: 54px;
+    --button-height-mobile: 48px;
     --button-border-radius: 100px;
     --image-border-radius: 16px;
     --secondary-border-radius: 12px; 
@@ -38,6 +43,13 @@
     white-space: nowrap;
     border: 0;
 }
+.visible {
+    display: flex !important;
+    transition: 0.3s ease;
+}
+* {
+    transition: 0.2s ease;
+}
 
 body {
     box-sizing: border-box;
@@ -49,16 +61,21 @@ body {
 }
 li a {
     color: var(--color-white);
+    border-radius: var(--button-border-radius);
+}
+* a:hover {
+    transform: scale(1.2);
+    background-color: var(--color-semi-transparent);
 }
 .header {
     width: 90%;
     margin-inline: auto;
     margin-top: 10px;
+    position: relative;
 }
 .logo {
     float: left;
     display: flex;
-    flex-direction: row;
     align-items: center;
     font-size: var(--font-size-subheading);
     font-family: var(--font-family-heading);
@@ -67,12 +84,22 @@ li a {
 .logo-caption{
     margin-left: 10px;
 }
+.cross-button {
+    display: none;
+}
+.burger {
+    display: none;
+    z-index: 8;
+}
 .navigation {
     display: flex;
+    flex-direction: row;
     justify-content: end;
+    margin-top: 30px;
 }
 .nav-list{
     display: flex;
+    flex-direction: row;
 }
 .list-item{
     display: flex;
@@ -81,7 +108,7 @@ li a {
 }
 .nav-link {
     height: 48px;
-    padding-inline:12px ;
+    padding-inline:20px ;
     margin-inline: 8px;
     width: 100%;
     display: flex;
@@ -130,7 +157,6 @@ li a {
     padding-inline: 15px;
     display: flex;
     justify-content: space-around;
-    width: 150px;
 }
 .email-link svg {
     font-size: 16px;
@@ -138,4 +164,149 @@ li a {
     width: 20px;
     height: 20px;
     color: var(--color-white);
+}
+.email-link:hover {
+    transform: scale(1.1);
+    background-color: var(--color-violet);
+}
+.socials {
+    height: 35px;
+    width: 35px;
+    padding: 10px;
+    border-radius: var(--button-border-radius);
+}
+.banner-image {
+    height: 665px;
+    width: auto;
+    border-radius: var(--image-border-radius);
+}
+
+
+/*Add media queries here*/
+
+@media only screen and (max-width: 1024px) {
+    .banner-heading{
+        font-size: 80px;
+    }
+    .banner-image {
+        height: 440px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    * a:hover {
+        background-color: transparent;
+    }
+    .header {
+        position: relative;
+    }
+    .logo-image {
+        height: 40px;
+    }
+    .logo-caption{
+        font-size: var(--font-size-subheading-mobile);
+    }
+    .navigation {
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: var(--color-black);
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+        display: none;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: start;
+        margin-top: 30px;
+    }
+    .list-item {
+        height: 90px;
+        width: 100%;
+        border-bottom: 1px solid var(--color-semi-transparent);
+    }
+    .nav-link {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: start;
+        font-family: var(--font-family-heading);
+        font-size: 35px;
+    }
+    .nav-link:hover {
+        transform: scale(1);
+        font-size: 45px;
+    }
+    .cross-button {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        z-index: 10;
+    }
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-self: end;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .burger span {
+        display: flex;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-white);
+    }
+    .banner {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-info {
+        width: 100%;
+        margin: 0;
+        margin-top: 50px;
+    }
+    .banner-heading{
+        font-size: var(--font-size-heading-1-mobile);
+    }
+    .contacts-link{
+        height: var(--button-height-mobile);
+        margin: 0;
+        padding: 0;
+    }
+    .email-link{
+        padding-inline: 15px;
+    }
+    .socials {
+        width: 30px;
+        height: 30px;
+        background-color: var(--color-semi-transparent);
+        margin-left: 10px;
+    }
+    .banner-image{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin-top: 30px;
+    }
+    @media only screen and (max-width: 320px) {
+        .contacts-link{
+            font-size: 13px;
+        }
+        .email-link svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
 }
