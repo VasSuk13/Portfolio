@@ -17,6 +17,7 @@
     --color-black: #000;
     --color-white: #fff;
     --color-violet: #676BFF;
+    --color-gray: rgb(165, 165, 165);
     --color-semi-transparent: rgba(255, 255, 255, 0.171);
     --font-size-subheading: 32px;
     --font-size-heading-1: 101px;
@@ -54,10 +55,10 @@
 
 body {
     box-sizing: border-box;
-    font-family: var(--font-family-text);
+    font-family: var(--font-family-text) !important;
     background-color: var(--color-black);
     color: var(--color-white);
-    font-size: var(--font-size-secondary-1);
+    font-size: var(--font-size-secondary-1) !important;
     width: 100vw;
     max-width: 1720px;
     margin-inline: auto !important;
@@ -147,6 +148,7 @@ li a {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 40px;
+    color: var(--color-gray);
 }
 .contacts-list {
     display: flex;
@@ -188,6 +190,151 @@ li a {
     width: auto;
     border-radius: var(--image-border-radius);
 }
+.main {
+    width: 90%;
+    margin-inline: auto;
+}
+.projects {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 160px;
+    color: var(--color-gray);
+}
+.projects-title {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading-2);
+    color: var(--color-white);
+}
+.projects-description {
+    font-size: var(--font-size-secondary-1);
+    font-weight: 500;
+    width: 50%;
+    margin-bottom: 80px;
+}
+.project-page {
+    height: 600px;
+    margin-bottom: 120px;
+    margin-top: 0;
+}
+.project-image {
+    float: left;
+    width: 600px;
+    height: 600px;
+    background-color: var(--color-semi-transparent);
+    border-radius: var(--secondary-border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 48px;
+}
+.project-image img {
+    width: 485px;
+    height: auto;
+    border-radius: var(--image-border-radius);
+}
+.project-title {
+    font-size: var(--font-size-subheading);
+    padding-top: 60px;
+    margin-bottom: 16px;
+}
+.project-description {
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+.information {
+    text-transform: uppercase;
+    line-height: 1.5;
+    border-bottom: 1px solid var(--color-gray);
+    display: flex;
+    height: 40px;
+    justify-content: start;
+    align-items: start;
+}
+.info-container {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-gray);
+}
+.links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    height: 80px;
+
+}
+.link {
+    padding: 15px;
+    text-transform: uppercase;
+    color: var(--color-violet);
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    font-size: var(--font-size-secondary-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    max-width: 250px;
+}
+.link-container {
+    margin-right: 30px;
+}
+.link-container :hover {
+    border-bottom:  2px solid var(--color-violet);
+    background-color: transparent;
+    font-size: var(--font-size-secondary-1);
+    font-weight: 700;
+   
+}
+.link svg {
+    margin-left: 10px;
+    box-sizing: content-box;
+    padding: 3px;
+}
+.arrow {
+    width: 16px;
+    height: 16px;
+}
+.link :hover {
+    border-bottom: none;
+}
+.personal {
+    width: 90%;
+    height: 850px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.personal-image {
+    display: none;
+}
+.personal-title {
+    font-size: var(--font-size-heading-1);
+    font-family: var(--font-family-heading);
+}
+.personal-subtitle {
+    font-size: var(--font-size-subheading);
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+.personal-description {
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+.personal-info {
+    width: 60%;
+    color: var(--color-gray);
+    display: flex;
+    flex-direction: column;align-items: center;
+}
+.personal-link {
+    margin-right: 0 !important;
+}
 
 
 /*Add media queries here*/
@@ -198,6 +345,19 @@ li a {
     }
     .banner-image {
         width: 50%;
+        height: auto;
+    }
+    .project-page {
+        height: auto;
+    }
+    .project-image {
+        float: none;
+        width: 100%;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+    }
+    .project-image img {
+        width: 80%;
         height: auto;
     }
 }
@@ -296,6 +456,7 @@ li a {
     .banner {
         display: flex;
         flex-direction: column;
+        height: auto;
     }
     .banner-info {
         width: 100%;
@@ -321,20 +482,72 @@ li a {
     }
     .banner-image{
         width: 100%;
-        max-width: 400px;
+        max-width: 500px;
         height: auto;
         margin-top: 30px;
     }
-    @media only screen and (max-width: 320px) {
-        .contacts-link{
-            font-size: 13px;
-        }
-        .email-link svg {
-            width: 15px;
-            height: 15px;
-        }
+    .links-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .link {
+        border-bottom: 3px solid var(--color-violet);
+    }
+    .personal-title {
+        display: none;
+    }
+    .personal {
+        flex-direction: column;
+        align-items: center;
+        max-height: none;
+        height: auto;
+        margin-bottom: 100px;
+    }
+    .personal-info {
+        width: 100%;
+    }
+    .personal-image {
+        display: flex;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 60px;
+        border-radius: var(--image-border-radius);
     }
 }
+@media only screen and (max-width: 550px) {
+    .link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 60px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .link-container {
+        width: 100%;
+    }
+    .links-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        height: auto;
+        width: 100%;
+    }
+ }
+
+@media only screen and (max-width: 320px) {
+    .contacts-link{
+        font-size: 13px;
+    }
+    .email-link svg {
+        width: 15px;
+        height: 15px;
+    }
+    
+}
+
 @media only screen and (min-width: 1900px) {
     body {
         transform: scale(1.2);
@@ -344,7 +557,7 @@ li a {
 
 @media only screen and (min-width: 2560px) {
     body {
-        transform: scale(1.4);
+        transform: scale(1.5);
         transform-origin: top;
     }
 }
