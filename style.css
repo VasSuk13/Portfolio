@@ -44,8 +44,9 @@
     border: 0;
 }
 .visible {
-    display: flex !important;
-    transition: 0.3s ease;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    transition: 0.5s ease;
 }
 * {
     transition: 0.2s ease;
@@ -87,7 +88,12 @@ li a {
     margin-left: 10px;
 }
 .cross-button {
-    display: none;
+    display: flex;
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: transparent;
+    border: none;
 }
 .burger {
     display: none;
@@ -216,8 +222,13 @@ li a {
         background-color: var(--color-black);
         position: fixed;
         top: 0;
+        right: 0;
         margin-top: 0;
-        display: none;
+        display:flex;
+        max-width: 0;
+        max-height: 0;
+        overflow: hidden;
+        
     }
     .nav-list{
         display: flex;
@@ -248,8 +259,6 @@ li a {
         top: 0;
         right: 0;
         padding: 10px;
-        background-color: transparent;
-        border: none;
         z-index: 10;
     }
     .burger {
@@ -264,12 +273,25 @@ li a {
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 8;
+    }
+    .burger-container {
+        width: 40px;
+        height: 40px;
+    }
+    .burger-container :hover {
+        width: 55px;
+    }
+    .cross-button :hover{
+        height: 40px;
+        width: 40px;
     }
     .burger span {
         display: flex;
         width: 100%;
         height: 3px;
         background-color: var(--color-white);
+        transform: scale(1);
     }
     .banner {
         display: flex;
