@@ -1,13 +1,13 @@
 
 @font-face {
     font-family: 'Bebas';
-    src: url('/Fonts/BebasNeue-Regular.woff2') format('woff2');
+    src: url('./Fonts/BebasNeue-Regular.woff2') format('woff2');
     font-style: normal;
     font-weight: normal;
 }
 @font-face {
     font-family: 'Manrope';
-    src: url('/Fonts/Manrope-VariableFont_wght.woff2') format('woff2');
+    src: url('./Fonts/Manrope-VariableFont_wght.woff2') format('woff2');
     font-style: normal;
     font-weight: normal;
 }
@@ -168,6 +168,8 @@ li a {
     padding-inline: 15px;
     display: flex;
     justify-content: space-around;
+    min-width: 140px;
+    font-size: var(--font-size-secondary-2);
 }
 .email-link svg {
     font-size: 16px;
@@ -351,6 +353,7 @@ li a {
     .project-page {
         height: auto;
     }
+    
     .project-image {
         float: none;
         width: 100%;
@@ -495,6 +498,9 @@ li a {
     .link {
         border-bottom: 3px solid var(--color-violet);
     }
+    .projects-description {
+        min-width: 280px;
+    }
     .personal-title {
         display: none;
     }
@@ -536,17 +542,20 @@ li a {
         height: auto;
         width: 100%;
     }
+    .socials {
+        margin-left: 5px;
+    }
  }
 
 @media only screen and (max-width: 320px) {
-    .contacts-link{
-        font-size: 13px;
-    }
     .email-link svg {
         width: 15px;
         height: 15px;
     }
-    
+    .email-link {
+        font-size: 13px;
+        min-width: 110px;
+    }
 }
 
 @media only screen and (min-width: 1900px) {
