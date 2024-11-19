@@ -462,6 +462,17 @@ li a {
         width: 80%;
         height: auto;
     }
+    .footer {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+    .contact-form {
+        align-self: center;
+    }
+    .contact-form {
+        width: 90%;
+        max-width: 600px;
+    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -596,6 +607,9 @@ li a {
     .link {
         border-bottom: 3px solid var(--color-violet);
     }
+    .projects-title {
+        font-size: var(--font-size-heading-2-mobile);
+    }
     .projects-description {
         min-width: 280px;
     }
@@ -619,6 +633,10 @@ li a {
         margin-top: 60px;
         border-radius: var(--image-border-radius);
     }
+    .footer-title {
+        font-size: var(--font-size-heading-1-mobile);
+    }
+    
 }
 @media only screen and (max-width: 550px) {
     .link{
@@ -643,6 +661,10 @@ li a {
     .socials {
         margin-left: 5px;
     }
+    .contact-form {
+        min-width: 100%;
+    }
+    
  }
 
 @media only screen and (max-width: 320px) {
