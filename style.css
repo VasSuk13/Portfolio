@@ -664,6 +664,9 @@ li a {
     .socials {
         margin-left: 5px;
     }
+    .footer-description {
+        font-size: 14px;
+    }
     .contact-form {
         min-width: 100%;
     }
