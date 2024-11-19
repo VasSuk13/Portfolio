@@ -416,6 +416,7 @@ li a {
 }
 .contact-form textarea {
     height: 155px;
+    resize: none;
 }
 .submit-button {
     height: var(--button-height);
