@@ -67,7 +67,7 @@ li a {
     color: var(--color-white);
     border-radius: var(--button-border-radius);
 }
-* a:hover {
+* a:hover, * a:active {
     transform: scale(1.2);
     background-color: var(--color-semi-transparent);
 }
@@ -114,6 +114,7 @@ li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
 }
 .nav-link {
     height: 48px;
@@ -178,7 +179,7 @@ li a {
     height: 20px;
     color: var(--color-white);
 }
-.email-link:hover {
+.email-link:hover, .email-link:active {
     transform: scale(1.1);
     background-color: var(--color-violet);
 }
@@ -285,7 +286,7 @@ li a {
 .link-container {
     margin-right: 30px;
 }
-.link-container :hover {
+.link-container:hover, .link-container:active {
     border-bottom:  2px solid var(--color-violet);
     background-color: transparent;
     font-size: var(--font-size-secondary-1);
@@ -301,7 +302,7 @@ li a {
     width: 16px;
     height: 16px;
 }
-.link :hover {
+.link:hover, .link:active {
     border-bottom: none;
 }
 .personal {
@@ -368,7 +369,7 @@ li a {
     color: var(--color-violet);
     margin-left: 10px;
 }
-.footer-description a:hover {
+.footer-description a:hover, .footer-description a:active  {
     background-color: transparent;
     transform: scale(1.2);
     transform-origin: left;
@@ -425,7 +426,7 @@ li a {
     color: var(--color-white);
     text-transform: uppercase;
 }
-.submit-button:hover {
+.submit-button:hover, .submit-button:active {
     transform: scale(1.2);
 }
 .copyright {
@@ -476,7 +477,7 @@ li a {
 }
 
 @media only screen and (max-width: 950px) {
-    * a:hover {
+    * a:hover, * a:active {
         background-color: transparent;
     }
     .header {
@@ -523,7 +524,7 @@ li a {
         font-family: var(--font-family-heading);
         font-size: 35px;
     }
-    .nav-link:hover {
+    .nav-link:hover, .nav-link:active {
         transform: scale(1);
         font-size: 45px;
     }
@@ -552,10 +553,10 @@ li a {
         width: 40px;
         height: 40px;
     }
-    .burger-container :hover {
+    .burger-container:hover, .burger-container:active {
         width: 55px;
     }
-    .cross-button :hover{
+    .cross-button:hover, .cross-button:active{
         height: 40px;
         width: 40px;
     }
