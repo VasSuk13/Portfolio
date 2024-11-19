@@ -13,8 +13,8 @@ crossButton.addEventListener('click', () => {
     crossButton.classList.remove('visible')
 });
 
-menuLink.forEach(element => {
-    element.addEventListener('click', () => {
+menuLink.forEach(link => {
+    link.addEventListener('click', () => {
         menu.classList.remove('visible');
         crossButton.classList.remove('visible')
     });
