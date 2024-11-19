@@ -1,6 +1,7 @@
 const crossButton = document.querySelector('.cross-button')
 const burgerButton = document.querySelector('.burger')
 const menu = document.querySelector('.navigation')
+const menuLink = document.querySelectorAll('.nav-link')
 
 burgerButton.addEventListener('click', () => {
     menu.classList.add('visible');
@@ -10,4 +11,11 @@ burgerButton.addEventListener('click', () => {
 crossButton.addEventListener('click', () => {
     menu.classList.remove('visible');
     crossButton.classList.remove('visible')
+});
+
+menuLink.forEach(element => {
+    element.addEventListener('click', () => {
+        menu.classList.remove('visible');
+        crossButton.classList.remove('visible')
+    });
 });

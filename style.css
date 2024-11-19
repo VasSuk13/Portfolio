@@ -51,6 +51,7 @@
 }
 * {
     transition: 0.2s ease;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -61,7 +62,7 @@ body {
     font-size: var(--font-size-secondary-1) !important;
     width: 100vw;
     max-width: 1720px;
-    margin-inline: auto !important;
+    
 }
 li a {
     color: var(--color-white);
